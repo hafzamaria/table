@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Loop</title>
+</head>
+
+<body>
+    <h1 class="h1">Table</h1>
+    <form onsubmit="printTable();return false">
+        <!-- <label for="number">Enter Number</label> -->
+        <br>
+        <input class="input" type="number" min="2" id="table" placeholder="enter your TableNumber"><br>
+        <button class="but" type="submit">Check</button>
+        <button class="but1" type="reset" value="reset">reset</button>
+    </form>
+    <p id="result"></p>
+
+
+
+    <script>
+        function printTable() {
+            let table = +document.querySelector("#table").value;
+            document.querySelector("#result").innerHTML =""
+
+
+            for (let i = 0; i < 12; i++) {
+                document.querySelector("#result").innerHTML +=
+         `${table} x ${i+1} = ${table*(i +1)}</br> `
+
+        //  console.log
+        //  (`${table} + ${i+1} = ${table+(i +1)}</br>` );
+            
+            }
+        }
+    
+        
+
+    </script>
+</body>
+
+</html>
